@@ -72,12 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2024",
             link: "https://www.coursera.org/account/accomplishments/verify/8ALUPZRDWUNY"
         },
-        // {
-        //     title: "Deep Learning Specialization",
-        //     issuer: "DeepLearning.AI",
-        //     date: "2021",
-        //     link: "#"
-        // }
+        {
+            title: "ML: Regression and Classification",
+            issuer: "Coursera",
+            date: "2024",
+            link: "https://www.coursera.org/account/accomplishments/verify/WKVBV7H58XPA"
+        }
     ];
 
     // Populate Experience
