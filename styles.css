@@ -14,10 +14,11 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth; /* For smooth scrolling to anchor links */
+    background-color: inherit; /* Inherit background from parent */
 }
 
 @font-face {
-    font-family: 'Neue Machina';
+    font-family: 'Be Vietnam';
     src: url('https://fonts.cdnfonts.com/css/neue-machina') format('woff2');
     font-weight: normal;
     font-style: normal;
@@ -34,7 +35,17 @@ body {
     background-position: bottom right;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin-top: 0;
+}
+
+/* Fix for ensuring all sections have transparent background */
+.section, 
+.experience-timeline, 
+.education-timeline, 
+.skills-grid, 
+.projects-grid, 
+.certifications-grid {
+    background-color: transparent !important;
+    color: var(--text-color);
 }
 
 #techBg {
@@ -47,16 +58,14 @@ body {
 
 /* Navigation */
 nav {
-    background-color: var(--bg-color); /* Use the exact same background color */
+    background-color: rgba(5, 0, 8, 0.85); /* Slightly transparent background */
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
-    backdrop-filter: blur(5px); /* Keep the blur effect */
-    border-bottom: none; /* Ensure no border */
-    box-shadow: none; /* Remove any shadow that might create a line */
+    backdrop-filter: blur(5px); /* Blur effect for modern browsers */
 }
 
 .nav-content {
@@ -70,7 +79,7 @@ nav {
 
 .logo {
     font-family: 'Neue Machina', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: var(--text-color);
     letter-spacing: 0.05em;
     text-decoration: none;
@@ -90,7 +99,7 @@ nav {
     letter-spacing: 0.1em;
     font-weight: 300;
     transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.4rem;
     border: 1px solid var(--primary-color);
     border-radius: 4px;
     display: flex;
@@ -100,7 +109,7 @@ nav {
 
 .nav-links a:after {
     content: ">";
-    font-size: 0.8em;
+    font-size: 0.5em;
     color: var(--primary-color);
 }
 
@@ -110,9 +119,8 @@ nav {
 
 /* Content wrapper for proper spacing */
 .content-wrapper {
-    padding-top: var(--nav-height); /* Keep the space for fixed navbar */
-    margin-top: 0; /* Ensure no extra margin */
-    border-top: none; /* Ensure no border */
+    padding-top: var(--nav-height); /* Add space for fixed navbar */
+    background-color: transparent;
 }
 
 /* Hero Section */
@@ -123,19 +131,22 @@ nav {
     justify-content: center;
     text-align: center;
     padding: 2rem;
+    background-color: transparent;
 }
 
 .hero-content {
     max-width: 1000px;
     margin: 0 auto;
+    background-color: transparent;
 }
 
 .hero-content h1 {
     font-family: 'Neue Machina', sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(--text-color);
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
+    background-color: transparent;
 }
 
 .hero-content h2 {
@@ -144,6 +155,7 @@ nav {
     font-weight: 300;
     color: var(--text-color);
     margin-bottom: 2rem;
+    background-color: transparent;
 }
 
 .hero-content h4 {
@@ -151,6 +163,11 @@ nav {
     font-weight: 300;
     max-width: 90%; /* Ensure paragraph doesn't go to the full width */
     margin: 0 auto; /* Center it */
+    background-color: transparent;
+}
+
+.hero-content p {
+    background-color: transparent;
 }
 
 /* Social Links */
@@ -162,6 +179,7 @@ nav {
     justify-content: center;
     width: 100%;
     margin: 2rem auto 0;
+    background-color: transparent;
 }
 
 .social-links a {
@@ -219,6 +237,7 @@ nav {
     letter-spacing: 0.05em;
     text-align: center;
     position: relative;
+    background-color: transparent;
 }
 
 .section h2:after {
@@ -236,16 +255,18 @@ nav {
 .experience-timeline {
     max-width: 900px;
     margin: 0 auto;
+    background-color: transparent !important;
 }
 
 .experience-item {
-    background: var(--secondary-color);
+    background: var(--secondary-color) !important;
     padding: 2rem;
     margin: 1.5rem 0;
     border-left: 3px solid var(--highlight-color);
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
+    color: var(--text-color);
 }
 
 .experience-item h3 {
@@ -253,6 +274,7 @@ nav {
     color: var(--text-color);
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
+    background-color: transparent;
 }
 
 .experience-company {
@@ -260,6 +282,7 @@ nav {
     font-weight: 500;
     margin-bottom: 0.5rem;
     font-family: 'Be Vietnam', sans-serif;
+    background-color: transparent;
 }
 
 .experience-dates {
@@ -267,12 +290,14 @@ nav {
     font-style: italic;
     margin-bottom: 1rem;
     font-family: 'Be Vietnam', sans-serif;
+    background-color: transparent;
 }
 
 .experience-list {
     list-style-type: none;
     padding-left: 0;
     font-family: 'Be Vietnam', sans-serif;
+    background-color: transparent;
 }
 
 .experience-list li {
@@ -281,6 +306,7 @@ nav {
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 1.5rem;
+    background-color: transparent;
 }
 
 .experience-list li::before {
@@ -294,21 +320,24 @@ nav {
 .education-timeline {
     max-width: 900px;
     margin: 0 auto;
+    background-color: transparent !important;
 }
 
 .education-item {
-    background: var(--secondary-color);
+    background: var(--secondary-color) !important;
     padding: 2rem;
     margin: 1.5rem 0;
     border-left: 3px solid var(--highlight-color);
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
 }
 
 .education-item h3 {
     font-family: 'Neue Machina', sans-serif;
     color: var(--text-color);
     margin-bottom: 0.5rem;
+    background-color: transparent;
 }
 
 .education-institution {
@@ -316,6 +345,7 @@ nav {
     font-weight: 500;
     margin-bottom: 0.5rem;
     font-family: 'Be Vietnam', sans-serif;
+    background-color: transparent;
 }
 
 .education-dates {
@@ -323,6 +353,7 @@ nav {
     font-style: italic;
     margin-bottom: 1rem;
     font-family: 'Be Vietnam', sans-serif;
+    background-color: transparent;
 }
 
 /* Skills Grid */
@@ -332,10 +363,11 @@ nav {
     gap: 1.5rem;
     max-width: 900px;
     margin: 0 auto;
+    background-color: transparent !important;
 }
 
 .skill-card {
-    background: var(--secondary-color);
+    background: var(--secondary-color) !important;
     padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
@@ -343,6 +375,12 @@ nav {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-family: 'Be Vietnam', sans-serif;
+    color: var(--text-color);
+}
+
+.skill-card * {
+    background-color: transparent;
+    color: var(--text-color);
 }
 
 .skill-card:hover {
@@ -357,15 +395,21 @@ nav {
     gap: 2rem;
     max-width: 1100px;
     margin: 0 auto;
+    background-color: transparent !important;
 }
 
 .project-card {
-    background: var(--secondary-color);
+    background: var(--secondary-color) !important;
     padding: 2rem;
     border-radius: 8px;
     border: 1px solid rgba(255, 102, 196, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text-color);
+}
+
+.project-card * {
+    background-color: transparent;
 }
 
 .project-card:hover {
@@ -378,6 +422,7 @@ nav {
     font-family: 'Neue Machina', sans-serif;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+    background-color: transparent;
 }
 
 .project-card .tech {
@@ -386,11 +431,13 @@ nav {
     margin-top: 1rem;
     font-style: italic;
     font-family: 'Be Vietnam', sans-serif;
+    background-color: transparent;
 }
 
 .project-card p {
     font-size: 0.95rem;
     font-family: 'Be Vietnam', sans-serif;
+    background-color: transparent;
 }
 
 /* Certifications Grid */
@@ -400,15 +447,21 @@ nav {
     gap: 2rem;
     max-width: 900px;
     margin: 0 auto;
+    background-color: transparent !important;
 }
 
 .certification-card {
-    background: var(--secondary-color);
+    background: var(--secondary-color) !important;
     padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
     border: 1px solid rgba(255, 102, 196, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
+}
+
+.certification-card * {
+    background-color: transparent;
 }
 
 .certification-card h3 a {
@@ -416,6 +469,7 @@ nav {
     text-decoration: none;
     transition: color 0.3s ease;
     font-family: 'Neue Machina', sans-serif;
+    background-color: transparent;
 }
 
 .certification-card h3 a:hover {
@@ -427,6 +481,7 @@ nav {
     font-style: italic;
     margin-top: 0.5rem;
     font-family: 'Be Vietnam', sans-serif;
+    background-color: transparent;
 }
 
 /* Add styles for sublists */
@@ -434,10 +489,12 @@ nav {
     padding-left: 1.5rem;
     margin-top: 0.5rem;
     font-family: 'Be Vietnam', sans-serif;
+    background-color: transparent;
 }
 
 .sublist li {
     margin-bottom: 0.3rem;
+    background-color: transparent;
 }
 
 .sublist li::before {
@@ -456,6 +513,39 @@ nav {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* Force background colors for dynamically created elements */
+[style*="background"] {
+    background-color: transparent !important;
+}
+
+[style*="background-color"] {
+    background-color: transparent !important;
+}
+
+div[style*="background"] {
+    background-color: transparent !important;
+}
+
+.experience-timeline > div {
+    background-color: var(--secondary-color) !important;
+}
+
+.education-timeline > div {
+    background-color: var(--secondary-color) !important;
+}
+
+.skills-grid > div {
+    background-color: var(--secondary-color) !important;
+}
+
+.projects-grid > div {
+    background-color: var(--secondary-color) !important;
+}
+
+.certifications-grid > div {
+    background-color: var(--secondary-color) !important;
 }
 
 /* Responsive Design */

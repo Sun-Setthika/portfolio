@@ -311,14 +311,16 @@ const education = [
     {
         degree: "MSc in Artificial Intelligence and Data Science",
         institution: "IMT Mines Ales",
-        dates: "2023 - 2025",
+        dates: "2024 - 2026",
         details: ""
     },
     {
-        degree: "BSc in Computer Science",
+        degree: "Engineer in Computer Science",
         institution: "Institute of Technology of Cambodia",
-        dates: "2019 - 2023",
-        details: ""
+        dates: "2019 - 2024",
+        details: "",
+        // link: "https://www.itc.edu.kh", // Add the URL you want to link to
+        // linkText: "View Institution" // Optional: Custom link text
     }
 ];
 
