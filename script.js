@@ -10,7 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
             company: "Cosywee",
             dates: "2024 - Present",
             description: `
-
+            <ul class="experience-list">
+                <li>Currently curating and expanding datasets to improve Optical Character Recognition (OCR) performance.</li>
+                <li>Actively managing and maintaining an OCR model in pre-production, implementing enhancements as needed.</li>
+                <li>Developing a Chatbot using Agentic RAG to provide dynamic product pricing based on size and additional items, along with general company information.</li>
+            </ul>
             `,
         },
         {
@@ -19,15 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
             dates: "2024 - 2024",
             description: `
             <ul class="experience-list">
-                <li>Fine-tuned a Pre-trained Model: Optimized the performance of a pre-trained TrOCR (Transformer-based OCR model) for general recognition tasks involving text, numbers, and special characters, tailored specifically to the company's proprietary dataset.</li>
-                <li>Pre-trained and Fine-tuned a Custom OCR Model
+                <li>Constructed a comprehensive company dataset and ground truth labels to support OCR model fine-tuning.</li>
+                <li>Fine-Tuned a Pre-trained Model:
                     <ul class="sublist">
-                        <li>Developed a CNN-based ResNet-BiLSTM model for OCR applications targeting numeric recognition.</li>
-                        <li>Pre-trained the model on a synthetic and open-source dataset comprising approximately 19 million samples.</li>
-                        <li>Fine-tuned the model on the company's proprietary dataset with around 20,000 samples, ensuring improved accuracy and robustness.</li>
+                        <li>Optimized a pre-trained TrOCR (Transformer-based OCR model) for general text, numeric, and special character recognition tasks.</li>
+                        <li>Adapted the model specifically to the company's proprietary dataset for enhanced accuracy.</li>
                     </ul>
                 </li>
+                <li>Pre-trained and Fine-Tuned a Custom OCR Model:
+                    <ul class="sublist">
+                        <li>Developed a CNN-based ResNet-BiLSTM architecture for numeric recognition tasks.</li>
+                        <li>Pre-trained the model using a synthetic and open-source dataset containing ~19 million samples.</li>
+                        <li>Fine-tuned the model on a proprietary dataset of ~20,000 samples to improve performance and robustness.</li>
+                    </ul>
+                </li>
+                <li>Developed an automation pipeline to connect to a mail server using Microsoft Graph API and locally download mailboxes containing quotations or purchase orders for OCR.</li>
             </ul>
+
 
             `,
             // description: "Pre-trained and Fine-tuned a Custom OCR Model"
@@ -64,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "AI Agents Fundamentals",
             issuer: "Hugging Face",
             date: "2025",
-            link: "https://cdn-lfs-us-1.hf.co/repos/f2/34/f2344151f60f6027c436821dc61cf3f27a46435de57df8df50ad02b5acca7c07/989d779a38da66c709cb92d6319a9ba6e7188181241630a2de297d86d1a0e363?response-content-disposition=inline%3B+filename*%3DUTF-8%27%272025-02-21.png%3B+filename%3D%222025-02-21.png%22%3B&response-content-type=image%2Fpng&Expires=1740220987&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0MDIyMDk4N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2YyLzM0L2YyMzQ0MTUxZjYwZjYwMjdjNDM2ODIxZGM2MWNmM2YyN2E0NjQzNWRlNTdkZjhkZjUwYWQwMmI1YWNjYTdjMDcvOTg5ZDc3OWEzOGRhNjZjNzA5Y2I5MmQ2MzE5YTliYTZlNzE4ODE4MTI0MTYzMGEyZGUyOTdkODZkMWEwZTM2Mz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=LSoDG66GwAz7Kr89Hf7QW0PHzqnVrqh0Ifhf8AfQ3ciOz1J8B4S3PSwdBlavfql%7EEflvlWDEMr0PqHgmVKwdkh6u58g23fc27PiHhq3eft6zWdEXVhP9ebMzeD1hj%7EzXUm8D-k-C2nX1K0Gq%7EavE3IiRF1VqvnIjdO00YBpfFD8iBDG5ZULH1YjVzOcMx-9cJKmTNuVxQarIm1LEDu3PEEYDT9sRYPHKYbXLw1R2b0VB06XMc%7EjodWvKFKQdGMFrvyX6-suW2xYhU1-TYMvpZ20qJB7V7OQnwJaEFAjGBCcZROWbn6lrvqv9TmDhf%7EYJw%7EDpfp1fYWsX%7EMizLl5KkQ__&Key-Pair-Id=K24J24Z295AEI9"
+            link: "https://cdn-lfs-us-1.hf.co/repos/f2/34/f2344151f60f6027c436821dc61cf3f27a46435de57df8df50ad02b5acca7c07/989d779a38da66c709cb92d6319a9ba6e7188181241630a2de297d86d1a0e363?response-content-disposition=inline%3B+filename*%3DUTF-8%27%272025-02-21.png%3B+filename%3D%222025-02-21.png%22%3B&response-content-type=image%2Fpng&Expires=1742732019&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0MjczMjAxOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2YyLzM0L2YyMzQ0MTUxZjYwZjYwMjdjNDM2ODIxZGM2MWNmM2YyN2E0NjQzNWRlNTdkZjhkZjUwYWQwMmI1YWNjYTdjMDcvOTg5ZDc3OWEzOGRhNjZjNzA5Y2I5MmQ2MzE5YTliYTZlNzE4ODE4MTI0MTYzMGEyZGUyOTdkODZkMWEwZTM2Mz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=rDun1BvPyPu2QajZkkZrPfXh%7E17HHF%7E6fkYLjxszIt4jZRJTlO5Wlji9pxcGaCiBJkyOw7E2Eabfgp-uaaRVPbTcxrQe0fNTgPEl6BmkMdNMzMrO19SrCGKLz-MW1xCHP9s1w9oQqokThFqlvHQ0T6lpBkw%7Eb6JX7BYyVE4KyNVwNOKof%7EuaHX3EgPcJHjGkExehncrpWujm-130lkHhekOW7d3lKW38dCKud%7Eh6-GoBe8vev9ASzi2yU2tNvf%7E13MrUbpyYlu5pbJycW5XUGCNOUJu%7E4d4p9JrEIJQMEA6YzKPyP%7E03VKymeOJX-DHJmZS3Li1Q0hrwXKhYUjt9wQ__&Key-Pair-Id=K24J24Z295AEI9"
         },
         {
             title: "Advanced Learning Algorithms",
@@ -166,27 +178,75 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dynamic Content
     const skills = [
-        'Python', 'TensorFlow', 'PyTorch', 
-        'NLP', 'Deep Learning', 'LLM', 'Linux',
-        'Git', 'Machine Learning', 'PERT', 'OCR', 'Object Detection',
+        'Python', 'TensorFlow', 'PyTorch', 'FastAPI', 'Flask', 'JavaScript', 'PHP', 'MLops',
+        'Laravel', 'Streamlit', 'Shell Scripting', 'Vue.js', 'Spring Boot', 'HTML', 'CSS', 'Tailwind CSS', 'Docker', 'Google Cloud Platform',
+        'NLP','Computer Vision' ,'Deep Learning', 'Deep Reinforcement Learning', 'LLM', 'Linux',
+        'Git', 'Machine Learning', 'PERT', 'OCR', 'Object Detection', 'Object Classification',
+        'Web Development',
     ];
 
     const projects = [
         {
+            id: 'academic-chatbot',
             title: 'Academic Chatbot',
-            description: 'Fine-tuned the Llama 3.1 8B model using the UnSloth framework with LoRA applied in 4-bit precision for efficient training. Leveraged the FastLanguageModel API with customized LoRA configurations, including targeted modules and gradient checkpointing, to optimize the model for processing a comprehensive school dataset. The dataset included course details, dormitory information, and working-student conditions. The objective was to assist international students by providing tailored information and resources to support their academic and personal needs.',
-            tech: 'Python, LLM, PyTorch, Deep Learning, Fine Tuning, LangChain, PERT'
+            description: `
+                <ul class="">
+                    <li>Conducted a comparative study of two chatbot development approaches: fine-tuning and Retrieval-Augmented Generation (RAG).</li>
+                    <li>Fine-tuned the pre-trained Llama 3.1 8B language model using UnSloth and LoRA, specifically optimized to assist international students by leveraging a custom academic dataset.</li>
+                    <li>Developed and implemented a robust RAG system that combines the Llama 3.1 8B model with a hybrid retrieval mechanism using BM25 and a semantic encoder (sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2).</li>
+                    <li>The dataset included comprehensive information such as:
+                        <ul class="sublist">
+                            <li>Housing and rental options for students.</li>
+                            <li>Study and work conditions for international learners.</li>
+                            <li>Detailed descriptions of courses, curricula, and academic requirements in the Department of Informatics and Artificial Intelligence.</li>
+                        </ul>
+                    </li>
+                </ul>
+            `,
+            tech: 'Python, LLM, PyTorch, Deep Learning, Fine Tuning, LangChain, PERT, Git'
         },
         {
+            id: 'handmotion-prediction',
             title: 'HandMotion Prediction',
             description: 'Developing a machine learning project to predict the acceleration of patients hands, providing one prediction per second for each hand from 7 AM to 7 PM. The dataset contains acceleration values (x, y, z) for both hands and corresponding timestamps, with 50 data points recorded per second. Responsibilities include synchronizing datasets for both hands by aligning timestamps, handling missing data through linear interpolation, and training a Long Short-Term Memory (LSTM) model to produce accurate, second-level predictions.',
-            tech: 'Python, Data Analysis, PyTorch, Time-series'
+            tech: 'Python, Data Analysis, PyTorch, Time-series, Git'
         },
-        // {
-        //     title: 'Medical Image Analysis',
-        //     description: 'CNN for tumor detection in MRI scans',
-        //     tech: 'Python, Keras, DICOM'
-        // }
+        {
+            id: 'object-detection',
+            title: 'Application of the LoRA on Object Detection model',
+            description: `
+                <ul>
+                    <li>This research project was conducted in collaboration with a PhD student from Sorbonne University. The objective was to explore the application of LoRA (Low-Rank Adaptation) to enhance the performance of DiffusionDet, an object detection model, under few-shot learning conditions. The goal was to evaluate whether LoRA can effectively adapt the model to new object categories using limited annotated data, improving efficiency and generalization in low-resource scenarios.</li>
+                    <li>We applied this approach to aerial imagery datasets, specifically DOTA (Dataset for Object Detection in Aerial Images) and DIOR (Dataset for Object Recognition in Aerial Images). These datasets contain complex scenes with multiple object classes captured from aerial perspectives, making them ideal for evaluating few-shot object detection in real-world scenarios.
+                    </li>
+                </ul>
+            `,
+            tech: 'Python, PyTorch, LoRA, Git'
+        },
+        {
+            id: 'object-classification',
+            title: 'Object classification',
+            description: `Trained a MobileViT model on the SPOTS-10: Animal Pattern dataset to classify animals based on their body patterns and textures, and on the CIFAR-10 dataset to classify objects. Developed an API using FastAPI, deployed the model trained on CIFAR-10 with Docker on Google Cloud Platform, and created a user interface hosted on Streamlit Community Cloud.`,
+            tech: 'Python, PyTorch, Git, Google Cloud Platform, FastAPI, Docker, Streamlit'
+        },
+        {
+            id: 'e-commerce',
+            title: 'E-Commerce Web application',
+            description: `Developed a web application for sports shoe sales using a Vue.js frontend and a Laravel backend. The frontend, built with Vue.js, provided a dynamic and responsive user interface, enabling users to browse products, filter by size, brand, and category, and manage their shopping cart in real time. The backend, powered by Laravel, handled key functionalities such as user authentication, product management, inventory tracking, order processing, and payment integration. The system also included an admin dashboard for managing product listings, viewing sales analytics, and handling customer queries. The application aimed to deliver a seamless e-commerce experience optimized for both desktop and mobile users.`,
+            tech: 'Java script, PHP, Vue.js, Laravel, HTML, CSS, Tailwind, Git'
+        },
+        {
+            id: 'cafe-system',
+            title: 'Café System',
+            description: `Developed a Point of Sale (POS) management system for a café using Java and the Spring Boot backend framework. The system was designed to streamline daily operations by managing orders, inventory, tables, billing, and staff roles. Key features included real-time order tracking, digital receipts, menu management, and role-based access for cashiers and administrators. The backend was built with Spring Boot to ensure scalability, modularity, and efficient API handling. The application aimed to improve service speed, reduce human error, and provide insightful sales reports for business analysis.`,
+            tech: 'Java, Spring Boot, HTML, CSS, Tailwind, Java script ,Git'
+        },
+        {
+            id: 'air-writing',
+            title: 'Air Writing',
+            description: `Collected and prepared khmer dataset to train and fine-tune an existing machine learning model with the goal of improving its prediction accuracy. The process involved data cleaning, augmentation, and labeling to ensure high-quality input. The model was retrained using the updated dataset, followed by performance evaluation through metrics such as accuracy, precision, recall, and F1-score. This iterative process helped enhance the model’s generalization and reliability in real-world scenarios.`,
+            tech: 'Python, PyTorch ,Git'
+        },
     ];
 
     
@@ -205,12 +265,25 @@ document.addEventListener('DOMContentLoaded', () => {
     projects.forEach(project => {
         const div = document.createElement('div');
         div.className = 'project-card';
+        div.id = project.id;
         div.innerHTML = `
             <h3>${project.title}</h3>
             <p>${project.description}</p>
             <div class="tech">${project.tech}</div>
         `;
         projectsGrid.appendChild(div);
+    });
+
+    // Check for anchor link on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        const hash = window.location.hash.substring(1); // Get #id from URL
+        if (hash) {
+            const project = document.getElementById(hash);
+            if (project) {
+                project.scrollIntoView({ behavior: 'smooth' });
+                project.style.backgroundColor = '#f8f9fa'; // Optional highlight
+            }
+        }
     });
 
     // Mobile Menu

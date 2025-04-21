@@ -1,39 +1,62 @@
 /* styles.css */
 :root {
-    --bg-color: #0d1117;
-    --text-color: #c9d1d9;
-    --primary-color: #238636;
-    --secondary-color: #161b22;
-    --accent-color: #1f6feb;
+    --bg-color: #050008; /* Darkened background */
+    --primary-color: #ff66c4; /* Pink color */
+    --text-color: #f3f4f4; /* Greyish white */
+    --secondary-color: #070d29; /* Box background color */
+    --accent-color: #4d1b78;
+    --highlight-color: #9747ff;
+    --nav-height: 80px; /* Define nav height for spacing */
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; /* For smooth scrolling to anchor links */
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('https://fonts.cdnfonts.com/css/neue-machina') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    background-image: radial-gradient(circle at bottom right, rgba(255, 102, 196, 0.4), rgba(151, 71, 255, 0.3), transparent 70%);
+    background-size: 150% 150%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 0;
 }
 
-canvas#techBg {
+#techBg {
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: 0.2; /* Reduced opacity for darker appearance */
 }
 
+/* Navigation */
 nav {
-    background: rgba(13, 17, 23, 0.8);
-    backdrop-filter: blur(10px);
+    background-color: var(--bg-color); /* Use the exact same background color */
+    padding: 1rem 0;
     position: fixed;
     width: 100%;
-    padding: 1rem 0;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    backdrop-filter: blur(5px); /* Keep the blur effect */
+    border-bottom: none; /* Ensure no border */
+    box-shadow: none; /* Remove any shadow that might create a line */
 }
 
 .nav-content {
@@ -46,28 +69,55 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
+    font-family: 'Neue Machina', sans-serif;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
+    font-family: 'Neue Machina', sans-serif;
     color: var(--text-color);
     text-decoration: none;
-    transition: color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.nav-links a:after {
+    content: ">";
+    font-size: 0.8em;
+    color: var(--primary-color);
 }
 
 .nav-links a:hover {
     color: var(--primary-color);
 }
 
+/* Content wrapper for proper spacing */
+.content-wrapper {
+    padding-top: var(--nav-height); /* Keep the space for fixed navbar */
+    margin-top: 0; /* Ensure no extra margin */
+    border-top: none; /* Ensure no border */
+}
+
+/* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--nav-height)); /* Adjust for navbar */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,182 +125,116 @@ nav {
     padding: 2rem;
 }
 
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-family: 'Neue Machina', sans-serif;
+    font-size: 4rem;
+    color: var(--text-color);
+    letter-spacing: 0.05em;
     margin-bottom: 1rem;
 }
 
 .hero-content h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+    font-family: 'Neue Machina', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--text-color);
+    margin-bottom: 2rem;
 }
 
+.hero-content h4 {
+    font-family: 'Be Vietnam', sans-serif;
+    font-weight: 300;
+    max-width: 90%; /* Ensure paragraph doesn't go to the full width */
+    margin: 0 auto; /* Center it */
+}
+
+/* Social Links */
 .social-links {
     margin-top: 2rem;
     display: flex;
-    gap: 1.5rem;
+    flex-direction: row;
+    gap: 1rem;
     justify-content: center;
+    width: 100%;
+    margin: 2rem auto 0;
 }
 
 .social-links a {
+    font-family: 'Neue Machina', sans-serif;
     color: var(--text-color);
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    transition: all 0.3s;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    text-align: center;
+    background-color: var(--secondary-color);
 }
 
 .social-links a:hover {
-    background: var(--primary-color);
-    color: white;
+    color: var(--primary-color);
 }
 
+.resume-btn {
+    font-family: 'Neue Machina', sans-serif;
+    display: inline-block;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.resume-btn:hover {
+    color: var(--primary-color);
+}
+
+/* Sections */
 .section {
     padding: 5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    scroll-margin-top: var(--nav-height); /* Adjust scroll position for fixed header */
 }
 
 .section h2 {
+    font-family: 'Neue Machina', sans-serif;
     font-size: 2.5rem;
+    color: var(--text-color);
     margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     text-align: center;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-}
-
-.skill-card {
-    background: var(--secondary-color);
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: var(--secondary-color);
-    border-radius: 10px;
-    padding: 1.5rem;
     position: relative;
-    overflow: hidden;
 }
 
-.project-card::before {
+.section h2:after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--primary-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 1px;
+    background-color: var(--primary-color);
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 0.8rem;
-    background: var(--secondary-color);
-    border: 1px solid #30363d;
-    border-radius: 5px;
-    color: var(--text-color);
-}
-
-.contact-form button {
-    background: var(--primary-color);
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .menu-btn {
-        display: block;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Experience Section */
-.experience-grid {
-    display: grid;
-    gap: 2rem;
-}
-
-.experience-card {
-    background: var(--secondary-color);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 3px solid var(--primary-color);
-}
-
-.experience-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.experience-card .duration {
-    color: #8b949e;
-    font-size: 0.9rem;
-}
-
-/* Resume Button */
-.resume-btn {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.8rem 2rem;
-    background: var(--accent-color);
-    color: white !important;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: opacity 0.3s;
-}
-
-.resume-btn:hover {
-    opacity: 0.9;
-}
-
-/* styles.css */
-/* Previous styles remain the same, add these new styles */
-
-/* Experience Section */
+/* Experience Timeline */
 .experience-timeline {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -258,83 +242,57 @@ nav {
     background: var(--secondary-color);
     padding: 2rem;
     margin: 1.5rem 0;
+    border-left: 3px solid var(--highlight-color);
     border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
-    border-left: 3px solid var(--primary-color);
 }
 
 .experience-item h3 {
-    color: var(--primary-color);
+    font-family: 'Neue Machina', sans-serif;
+    color: var(--text-color);
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.experience-company {
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-family: 'Be Vietnam', sans-serif;
 }
 
 .experience-dates {
-    color: #8b949e;
-    font-size: 0.9rem;
-}
-
-.experience-description {
-    margin-top: 1rem;
-    color: #c9d1d9;
-}
-
-/* Certifications Section */
-.certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.certification-card {
-    background: var(--secondary-color);
-    padding: 1.5rem;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.certification-card:hover {
-    transform: translateY(-5px);
-}
-
-.certification-card a {
     color: var(--primary-color);
-    text-decoration: none;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-family: 'Be Vietnam', sans-serif;
 }
 
-.resume-download {
-    margin: 2rem 0;
+.experience-list {
+    list-style-type: none;
+    padding-left: 0;
+    font-family: 'Be Vietnam', sans-serif;
 }
 
-.resume-btn {
-    background: var(--primary-color);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: opacity 0.3s;
+.experience-list li {
+    font-family: 'Be Vietnam', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
 }
 
-.resume-btn:hover {
-    opacity: 0.9;
-}
-
-/* Timeline connector */
-.experience-item::before {
-    content: "";
+.experience-list li::before {
+    content: "•";
+    color: var(--primary-color);
     position: absolute;
-    left: -10px;
-    top: 25px;
-    width: 20px;
-    height: 20px;
-    background: var(--bg-color);
-    border: 3px solid var(--primary-color);
-    border-radius: 50%;
+    left: 0;
 }
 
-/* styles.css */
-/* Add these new styles */
+/* Education Timeline */
 .education-timeline {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -342,73 +300,229 @@ nav {
     background: var(--secondary-color);
     padding: 2rem;
     margin: 1.5rem 0;
+    border-left: 3px solid var(--highlight-color);
     border-radius: 8px;
-    position: relative;
-    border-left: 3px solid var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .education-item h3 {
-    color: var(--primary-color);
+    font-family: 'Neue Machina', sans-serif;
+    color: var(--text-color);
     margin-bottom: 0.5rem;
+}
+
+.education-institution {
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-family: 'Be Vietnam', sans-serif;
 }
 
 .education-dates {
-    color: #8b949e;
-    font-size: 0.9rem;
-}
-
-.education-details {
-    margin-top: 1rem;
-    color: #c9d1d9;
-}
-
-.education-item::before {
-    content: "";
-    position: absolute;
-    left: -10px;
-    top: 25px;
-    width: 20px;
-    height: 20px;
-    background: var(--bg-color);
-    border: 3px solid var(--accent-color);
-    border-radius: 50%;
-}
-/* Add to styles.css */
-.experience-list {
-    padding-left: 1.5rem;
-    list-style-type: square;
-    color: var(--text-color);
-}
-
-.experience-list li {
-    margin-bottom: 0.5rem;
-    position: relative;
-}
-
-.experience-list li::before {
-    content: "▹";
     color: var(--primary-color);
-    position: absolute;
-    left: -1.2rem;
-}
-/* Add to styles.css */
-.sublist {
-    padding-left: 2rem;
-    list-style-type: none;
-    margin-top: 0.5rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-family: 'Be Vietnam', sans-serif;
 }
 
-.sublist li::before {
-    content: "•";
-    color: var(--accent-color);
-    position: absolute;
-    left: -1.5rem;
-    font-size: 0.9em;
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 102, 196, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 102, 196, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    color: var(--text-color);
+    font-family: 'Neue Machina', sans-serif;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.project-card .tech {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-style: italic;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+/* Certifications Grid */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.certification-card {
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 102, 196, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.certification-card h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Neue Machina', sans-serif;
+}
+
+.certification-card h3 a:hover {
+    color: var(--primary-color);
+}
+
+.cert-date {
+    color: var(--primary-color);
+    font-style: italic;
+    margin-top: 0.5rem;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+/* Add styles for sublists */
+.sublist {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Be Vietnam', sans-serif;
 }
 
 .sublist li {
-    position: relative;
-    font-size: 0.95em;
-    color: #8b949e;
     margin-bottom: 0.3rem;
+}
+
+.sublist li::before {
+    content: "◦";
+    color: var(--primary-color);
+}
+
+/* Custom background animation */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        --nav-height: 120px; /* Increase for mobile layout */
+    }
+    
+    .nav-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .nav-links a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .social-links a {
+        min-width: 100px;
+        padding: 0.8rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section {
+        padding: 3rem 1rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animated particles */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
