@@ -65,12 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2025",
             link: "https://shorturl.at/ZP4EE"
         },
-        {
-            title: "Deep RL Course",
-            issuer: "Hugging Face",
-            date: "2025",
-            link: "https://huggingface.co/learn/deep-rl-course/en/communication/certification"
-        },
+        // {
+        //     title: "Deep RL Course",
+        //     issuer: "Hugging Face",
+        //     date: "2025",
+        //     link: "https://huggingface.co/learn/deep-rl-course/en/communication/certification"
+        // },
         // {
         //     title: "ML: Regression and Classification",
         //     issuer: "Coursera",
@@ -195,8 +195,18 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'Finetune Text to Speech',
             title: 'Finetune Text to Speech',
-            description: 'Developing a machine learning project to predict the acceleration of patients hands, providing one prediction per second for each hand from 7 AM to 7 PM. The dataset contains acceleration values (x, y, z) for both hands and corresponding timestamps, with 50 data points recorded per second. Responsibilities include synchronizing datasets for both hands by aligning timestamps, handling missing data through linear interpolation, and training a Long Short-Term Memory (LSTM) model to produce accurate, second-level predictions.',
-            tech: 'Python, Data Analysis, PyTorch, Time-series, Git'
+            description: `
+            <ul>
+                <li>Fine-tuned the SpeechT5 model, a versatile transformer-based architecture, to generate high-quality speech in multiple languages using the VoxPopuli dataset.</li>
+                <li>Prepared and processed a subset of the VoxPopuli dataset (10-15 hours of audio) for efficient fine-tuning, focusing on languages like Dutch. </li>
+                <li>Performed data preprocessing tasks such as text normalization, tokenization, audio resampling (to 16kHz), and feature extraction (e.g., mel-spectrograms) using the SpeechT5Processor.</li>
+                <li>Generated placeholder speaker embeddings to condition the model on speaker-specific characteristics, improving the naturalness and consistency of synthesized speech.</li>
+                
+            </ul>
+        `,
+        // <li>Evaluated the model's performance on a validation set and qualitatively analyzed generated audio outputs for clarity, naturalness, and alignment with target language nuances.</li>
+        // <li>Deployed the fine-tuned model to the Hugging Face Hub, enabling seamless sharing and integration into applications like voice assistants, audiobook generation, and accessibility tools.</li>
+            tech: 'Python, PyTorch, Hugging Face Transformers, SpeechT5, VoxPopuli Dataset, Seq2SeqTrainer, Data Preprocessing, Feature Extraction, Model Fine-Tuning, Git'
         },
         {
             id: 'Data Visualization',
@@ -205,6 +215,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <ul>
                     <li>Designed and implemented a data analysis pipeline for social media interaction patterns, processing raw survey data through comprehensive cleaning, feature engineering, and categorical encoding using R, dplyr, and tidy</li>
                     <li>Developed and deployed interactive dashboard visualizations (Shiny) to explore relationships between time spent on platforms, stranger interactions, and psychological impacts </li>
+                    <li>Click here for more details:
+                     <a href="https://visualizedata.shinyapps.io/Projet/" target="_blank">https://visualizedata.shinyapps.io/Projet/ class="data-visualization-link"</a>
                     </li>
                 </ul>
             `,
@@ -213,8 +225,19 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'Movie Review Sentiment Classification: A Comparative Study of Traditional and Deep Learning Models',
             title: 'Movie Review Sentiment Classification: A Comparative Study of Traditional and Deep Learning Models',
-            description: `Trained a MobileViT model on the SPOTS-10: Animal Pattern dataset to classify animals based on their body patterns and textures, and on the CIFAR-10 dataset to classify objects. Developed an API using FastAPI, deployed the model trained on CIFAR-10 with Docker on Google Cloud Platform, and created a user interface hosted on Streamlit Community Cloud.`,
-            tech: 'Python, PyTorch, Git, Google Cloud Platform, FastAPI, Docker, Streamlit'
+            description: `
+            <ul>
+                <li>Conducted a comprehensive study to compare traditional machine learning models (SVM, Logistic Regression, Naive Bayes) with deep learning models (LSTM, BERT transformer) for sentiment classification on movie reviews.</li>
+                <li>Fine-tuned deep learning models, including LSTM and BERT, on a labeled dataset of movie reviews to improve their performance in semantic understanding and sentiment prediction.</li>
+                <li>Preprocessed text data using techniques such as tokenization, stopword removal, and TF-IDF vectorization for traditional models, while leveraging embeddings like Word2Vec and contextualized embeddings from BERT for deep learning models.</li>
+                <li>Evaluated model performance using metrics such as accuracy, precision, recall, and F1-score, providing a detailed comparison of the strengths and limitations of each approach.</li>
+                <li>Deployed and deployed the best-performing model for real-time sentiment analysis. The application was hosted on a user-friendly interface developed using Streamlit Community Cloud.</li>
+                <li>Click here for more details:
+                     <a href="https://movies-review-sentiment-analysis-eidbpyv6tkvo8wkyubsjph.streamlit.app/?fbclid=IwZXh0bgNhZW0CMTEAAR7UAkgaojxC4HVxxrFyoFNHMZyRfUlpah9SR_XmIdmzSf9b4WaCMI8_TEHeWg_aem_-8P8WVo3vsoMKAg2ZSWOnw" target="_blank">https://movies-review-sentiment-analysis-eidbpyv6tkvo8wkyubsjph.streamlit.app/?fbclid=IwZXh0bgNhZW0CMTEAAR7UAkgaojxC4HVxxrFyoFNHMZyRfUlpah9SR_XmIdmzSf9b4WaCMI8_TEHeWg_aem_-8P8WVo3vsoMKAg2ZSWOnw "</a>
+                </li>
+            </ul>
+        `,
+         tech: 'Python, PyTorch, TensorFlow, Scikit-learn, NLTK, Hugging Face Transformers, Streamlit'
         },
         {
             id: 'e-commerce',

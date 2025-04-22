@@ -451,6 +451,18 @@ nav {
     background-color: transparent;
 }
 
+.project-card a {
+    color: pink; /* Set the link color to pink */
+    text-decoration: none; /* Remove underline by default */
+    word-break: break-word; /* Ensure long URLs wrap properly */
+    display: inline-block; /* Prevent overflow issues */
+    max-width: 100%; /* Ensure the link respects the container's width */
+}
+
+.project-card a:hover {
+    text-decoration: underline; /* Add underline on hover for better UX */
+}
+
 /* Certifications Grid */
 .certifications-grid {
     display: grid;
