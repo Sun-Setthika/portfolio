@@ -1,5 +1,4 @@
 // script.js
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
     // Previous background and setup code remains the same
 
@@ -11,24 +10,26 @@ document.addEventListener('DOMContentLoaded', () => {
             dates: "Jan 2025 - Present",
             description: `
                 <ul class="experience-list">
-                    <li>Designed and implemented an intelligent email classification system using LLaMA 3.1 8B and UnSloth, enabling zero-shot intent recognition without labeled training data.</li>
+                    <li>Designed and deployed a zero-shot email classification system using LLaMA 3.1 8B and UnSloth, without the need for labeled training data.</li>
                     <li>Refined prompt engineering techniques to ensure the AI system responded and classified accurately and naturally according to the task, making interactions smoother for prefecutre.</li>
-                    <li>Developed a robust Retrieval-Augmented Generation (RAG) pipeline to dynamically fetch and incorporate relevant law code for response generation and letter generation task.</li>
+                    <li>Created a Retrieval-Augmented Generation (RAG) pipeline to dynamically  that dynamically pulls in relevant legal codes and administrative policies for response generation and letter generation task.</li>
                 </ul>
             `,
         },
         {
-            title: "AI Developer on OCR Application",
+            title: "AI Engineer",
             company: "Ministry of Posts and Telecommunication, Cambodia",
             dates: "Feb 2024 - May 2024",
             description: `
                 <ul class="experience-list">
-                    <li>Developed OCR system (Optical Character Recognition) tailored for Khmer scripts—addressing the nation's unique linguistic and technical needs. The goal was to digitize printed Khmer text—making it accessible, searchable, and editable.This involved recognizing five specific fonts commonly used in official and historical texts: Khmer Mondulkiri, Battambang, Khmer OS Siemreap, Khmer OS Muol Light, and Khmer OS Bokor.</li>
-                    <li>Construct synthetic datasets from raw text files using PyTesseract and OpenCV, enhancing training diversity in font size, fonts to model robustness.</li>
-                    <li>Fine-tuned CNN-GRU models to accurately recognize complex character structures and extract text from the input image, improving digital accessibility in Cambodian public services.</li>
-                    <li>Built a user-friendly interface with Gradio that allowed non-technical users to upload image and extract, edit, and manage text from images effortlessly.</li>
+                    <li>Developed OCR system (Optical Character Recognition)  for Khmer language using PyTesseract, OpenCV, and a CNN-GRU architecture, enabling accurate recognition of complex syllabic structures and unique typographic features in Khmer.</li>
+                    <li>Constructed diverse synthetic datasets from raw text, and csv using various font families (Khmer Mondulkiri, Battambang, Khmer OS Siemreap, Khmer OS Muol Light, and Khmer OS Bokor), improving model robustness and real-world performance.</li>
+                    <li>Fine-tuned a deep learning pipeline combining Convolutional Neural Networks (CNN) with Gated Recurrent Units (GRU) to handle spatial and sequential features, ehnacing the accuracy and extract text from the input image.</li>
+                    <li>Built a user-friendly interface with Gradio that allowed users to upload image and extract, edit, and manage text from images effortlessly.</li>
+                    <li>Accelerated the digitization of Khmer documents, enhancing searchability and preservation of cultural records while supporting the Ministry’s broader e-governance and AI for public service agenda.</li>
                 </ul>
             `,
+            // <li>Developed OCR system (Optical Character Recognition) tailored for Khmer scripts—addressing the nation's unique linguistic and technical needs. The goal was to digitize printed Khmer text—making it accessible, searchable, and editable.This involved recognizing five specific fonts commonly used in official and historical texts: Khmer Mondulkiri, Battambang, Khmer OS Siemreap, Khmer OS Muol Light, and Khmer OS Bokor.</li>
         },
         {
             title: "Full-stack Developer",
@@ -36,14 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
             dates: "Jul 2023 - Sep 2023",
             description: `
                 <ul class="experience-list">
-                    <li>Build and launched an online application system for Master's candidates to cutdown on paper work, streamlining admissions for thousands of students.</li>
-                    <li>Developed role-based workflows using Laravel and Vue.js for applicants, program heads, and administrators.</li>
-                    <li>Enabled features such as document uploads, draft-saving, live application tracking, and automated PDF/Excel report generation—modernizing the educational infrastructure.</li>
+                    <li>Designed and Developed, role-based workflow system using Laravel (PHP) and Vue.js, offering dedicated user paths for applicants, department heads, and administrators.</li>
+                    <li>Developed online application system for seamless document upload, draft-saving, and real-time application tracking, significantly improving Master's applicants' experiences in registering for Master program online and reducing back-and-forth email traffic.</li>
+                    <li>Integrated automated PDF/Excel report generation for administrators, reducing manual paperwork and enhancing data visibility across programs.</li>
                 </ul>
             `,
         },
         {
-            title: "POS System Developer",
+            title: "Software Engineer",
             company: "Institute of Technology of Cambodia",
             dates: "May 2023 - Jul 2023",
             description: `
