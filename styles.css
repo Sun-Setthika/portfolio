@@ -356,6 +356,17 @@ nav {
     background-color: transparent;
 }
 
+.education-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.education-link:hover {
+    opacity: 0.8;
+}
+
 /* Skills Grid */
 .skills-grid {
     display: grid;
