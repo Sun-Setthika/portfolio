@@ -66,12 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2025",
             link: "https://shorturl.at/ZP4EE"
         },
-        // {
-        //     title: "Deep RL Course",
-        //     issuer: "Hugging Face",
-        //     date: "2025",
-        //     link: "https://huggingface.co/learn/deep-rl-course/en/communication/certification"
-        // },
+        {
+            title: "LLM Course",
+            issuer: "Hugging Face",
+            date: "2025",
+            link: "https://cdn-uploads.huggingface.co/production/uploads/noauth/6Pj-3qk8EMIMpgzYDNaaX.webp"
+        }
         // {
         //     title: "ML: Regression and Classification",
         //     issuer: "Coursera",
