@@ -25,6 +25,7 @@
 }
 
 
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -452,7 +453,8 @@ nav {
     background-color: transparent;
 }
 
-.project-card a {
+.project-card a,
+.education-item a {
     color: pink; /* Set the link color to pink */
     text-decoration: none; /* Remove underline by default */
     word-break: break-word; /* Ensure long URLs wrap properly */
