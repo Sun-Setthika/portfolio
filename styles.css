@@ -24,6 +24,7 @@
     font-style: normal;
 }
 
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -461,6 +462,14 @@ nav {
 
 .project-card a:hover {
     text-decoration: underline; /* Add underline on hover for better UX */
+}
+
+/* Optional highlight effect when scrolled to */
+.project-card:target {
+    background-color: #f1f5f9;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 /* Certifications Grid */

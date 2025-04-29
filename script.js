@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: 'Python, LLM, PyTorch, Deep Learning, Fine Tuning, LangChain, PERT, Git'
         },
         {
-            id: 'Finetune Text to Speech',
+            id: 'Finetune-Text-to-Speech',
             title: 'Finetune Text to Speech',
             description: `
             <ul>
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: 'Python, PyTorch, Hugging Face Transformers, SpeechT5, VoxPopuli Dataset, Seq2SeqTrainer, Data Preprocessing, Feature Extraction, Model Fine-Tuning, Git'
         },
         {
-            id: 'Data Visualization',
+            id: 'Data-Visualization',
             title: 'Data Visualization',
             description: `
                 <ul>
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: 'R, Shinyapp, Python, Data Analysis, Git'
         },
         {
-            id: 'Movie Review Sentiment Classification: A Comparative Study of Traditional and Deep Learning Models',
+            id: 'Movie-Review',
             title: 'Movie Review Sentiment Classification: A Comparative Study of Traditional and Deep Learning Models',
             description: `
             <ul>
@@ -286,16 +286,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Check for anchor link on page load
-    window.addEventListener('DOMContentLoaded', () => {
-        const hash = window.location.hash.substring(1); // Get #id from URL
-        if (hash) {
-            const project = document.getElementById(hash);
-            if (project) {
-                project.scrollIntoView({ behavior: 'smooth' });
-                project.style.backgroundColor = '#f8f9fa'; // Optional highlight
+    // window.addEventListener('DOMContentLoaded', () => {
+    //     const hash = window.location.hash.substring(1); // Get #id from URL
+    //     if (hash) {
+    //         const project = document.getElementById(hash);
+    //         if (project) {
+    //             project.scrollIntoView({ behavior: 'smooth' });
+    //             project.style.backgroundColor = '#f8f9fa'; // Optional highlight
+    //         }
+    //     }
+    // });
+
+    // Smooth scroll handler
+    function scrollToTarget(hash, offset = 0) {
+        setTimeout(() => {
+            const target = document.querySelector(hash);
+            if (target) {
+                const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
             }
+        }, 100); // Give DOM time to render
+    }
+
+    // Handle direct navigation with hash (#)
+    window.addEventListener('load', () => {
+        if (window.location.hash) {
+            scrollToTarget(window.location.hash, 100); // Adjust offset if nav bar overlaps
         }
     });
+
+    // Handle clicks on anchor links
+    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //     anchor.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         history.pushState(null, '', this.getAttribute('href'));
+    //         scrollToTarget(this.getAttribute('href'), 100);
+    //     });
+    // });
 
     // Mobile Menu
     const menuBtn = document.querySelector('.menu-btn');
