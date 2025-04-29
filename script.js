@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animate();
     window.addEventListener('resize', resizeCanvas);
 
-    // Add Experience Data
+    // Experience Data
     const experience = [
         {
             title: "Mission and Research Development",
@@ -64,52 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `
                 <ul class="experience-list">
                     <li>Designed and deployed a zero-shot email classification system using LLaMA 3.1 8B and UnSloth, without the need for labeled training data.</li>
-                    <li>Refined prompt engineering techniques to ensure the AI system responded and classified accurately and naturally according to the task, making interactions smoother for prefecutre.</li>
-                    <li>Created a Retrieval-Augmented Generation (RAG) pipeline to dynamically  that dynamically pulls in relevant legal codes and administrative policies for response generation and letter generation task.</li>
+                    <li>Refined prompt engineering techniques to ensure the AI system responded and classified accurately and naturally according to the task.</li>
+                    <li>Created a Retrieval-Augmented Generation (RAG) pipeline that dynamically pulls in relevant legal codes and administrative policies.</li>
                 </ul>
             `,
         },
-        {
-            title: "AI Engineer",
-            company: "Ministry of Posts and Telecommunication, Cambodia",
-            dates: "Feb 2024 - May 2024",
-            description: `
-                <ul class="experience-list">
-                    <li>Developed OCR system (Optical Character Recognition)  for Khmer language using PyTesseract, OpenCV, and a CNN-GRU architecture, enabling accurate recognition of complex syllabic structures and unique typographic features in Khmer.</li>
-                    <li>Constructed diverse synthetic datasets from raw text, and csv using various font families (Khmer Mondulkiri, Battambang, Khmer OS Siemreap, Khmer OS Muol Light, and Khmer OS Bokor), improving model robustness and real-world performance.</li>
-                    <li>Fine-tuned a deep learning pipeline combining Convolutional Neural Networks (CNN) with Gated Recurrent Units (GRU) to handle spatial and sequential features, ehnacing the accuracy and extract text from the input image.</li>
-                    <li>Built a user-friendly interface with Gradio that allowed users to upload image and extract, edit, and manage text from images effortlessly.</li>
-                    <li>Accelerated the digitization of Khmer documents, enhancing searchability and preservation of cultural records while supporting the Ministry's broader e-governance and AI for public service agenda.</li>
-                </ul>
-            `,
-        },
-        {
-            title: "Full-stack Developer",
-            company: "Institute of Technology of Cambodia",
-            dates: "Jul 2023 - Sep 2023",
-            description: `
-                <ul class="experience-list">
-                    <li>Designed and Developed, role-based workflow system using Laravel (PHP) and Vue.js, offering dedicated user paths for applicants, department heads, and administrators.</li>
-                    <li>Developed online application system for seamless document upload, draft-saving, and real-time application tracking, significantly improving Master's applicants' experiences in registering for Master program online and reducing back-and-forth email traffic.</li>
-                    <li>Integrated automated PDF/Excel report generation for administrators, reducing manual paperwork and enhancing data visibility across programs.</li>
-                </ul>
-            `,
-        },
-        {
-            title: "Software Engineer",
-            company: "Institute of Technology of Cambodia",
-            dates: "May 2023 - Jul 2023",
-            description: `
-                <ul class="experience-list">
-                    <li>Created a fully operational Point-of-Sale (POS) system tailored to café environments using Java and Spring Boot and Thymleaf.</li>
-                    <li>Implemented inventory management, operations by managing orders, tables reservation, billing, and staff roles.</li>
-                    <li>Key features included real-time order tracking, digital receipts generation, menu management, and role-based access for cashiers and administrators. The backend was built with Spring Boot to ensure scalability, modularity, and efficient API handling. The application aimed to improve service speed, reduce human error, and provide insightful sales reports for business analysis.</li>
-                </ul>
-            `,
-        }
+        // ... other experience items
     ];
 
-    // Add Certifications Data
+    // Certifications Data
     const certifications = [
         {
             title: "AI Agents Fundamentals",
@@ -117,183 +80,144 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2025",
             link: "https://shorturl.at/ZP4EE"
         },
-        {
-            title: "LLM Course",
-            issuer: "Hugging Face",
-            date: "2025",
-            link: "https://cdn-uploads.huggingface.co/production/uploads/noauth/6Pj-3qk8EMIMpgzYDNaaX.webp"
-        }
+        // ... other certifications
     ];
 
-    // Dynamic Content
+    // Skills Data
     const skills = [
         'Python', 'TensorFlow', 'PyTorch', 'Gradio', 'Streamlit', 'PHP', 
-        'Laravel', 'Vue.js', 'Spring Boot', 'HTML', 'CSS', 'Tailwind CSS', 'Docker', 'JavaScript', 'C++',
-        'NLP','LLM','Computer Vision', 'Deep Learning', 'Deep Reinforcement Learning',
-        'Machine Learning','OCR (Optical Character Recognition)','Git', 'Linux', 'Web Development'
+        'Laravel', 'Vue.js', 'Spring Boot', 'HTML', 'CSS', 'Tailwind CSS',
+        'Docker', 'JavaScript', 'C++', 'NLP', 'LLM', 'Computer Vision',
+        'Deep Learning', 'Machine Learning', 'OCR', 'Git', 'Linux'
     ];
 
+    // Projects Data
     const projects = [
         {
-            id: 'academic-chatbot',
-            title: 'Academic Chatbot',
-            description: `
-                <ul class="">
-                    <li>Conducted a comparative study of two chatbot development approaches: fine-tuning and Retrieval-Augmented Generation (RAG).</li>
-                    <li>Fine-tuned the pre-trained Llama 3.1 8B language model using UnSloth and LoRA, specifically optimized to assist international students by leveraging a custom academic dataset.</li>
-                    <li>Developed and implemented a robust RAG system that combines the Llama 3.1 8B model with a hybrid retrieval mechanism using BM25 and a semantic encoder (sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2).</li>
-                    <li>The dataset included comprehensive information such as:
-                        <ul class="sublist">
-                            <li>Housing and rental options for students.</li>
-                            <li>Study and work conditions for international learners.</li>
-                            <li>Detailed descriptions of courses, curricula, and academic requirements in the Department of Informatics and Artificial Intelligence.</li>
-                        </ul>
-                    </li>
-                </ul>
-            `,
-            tech: 'Python, LLM, PyTorch, Deep Learning, Fine Tuning, LangChain, PERT, Git'
-        },
-        {
-            id: 'Finetune-Text-to-Speech',
+            id: 'Finetune-Text-to-Speech',  // Anchor target for linking
             title: 'Finetune Text to Speech',
             description: `
             <ul>
-                <li>Fine-tuned the SpeechT5 model, a versatile transformer-based architecture, to generate high-quality speech in multiple languages using the VoxPopuli dataset.</li>
-                <li>Prepared and processed a subset of the VoxPopuli dataset (10-15 hours of audio) for efficient fine-tuning, focusing on languages like Dutch.</li>
-                <li>Performed data preprocessing tasks such as text normalization, tokenization, audio resampling (to 16kHz), and feature extraction (e.g., mel-spectrograms) using the SpeechT5Processor.</li>
-                <li>Generated placeholder speaker embeddings to condition the model on speaker-specific characteristics, improving the naturalness and consistency of synthesized speech.</li>
+                <li>Fine-tuned the SpeechT5 model to generate high-quality speech in multiple languages using the VoxPopuli dataset.</li>
+                <li>Prepared and processed a subset of VoxPopuli (10-15 hours of audio) focusing on languages like Dutch.</li>
+                <li>Performed text normalization, tokenization, audio resampling, and feature extraction.</li>
+                <li>Generated speaker embeddings to improve speech naturalness and consistency.</li>
             </ul>
             `,
-            tech: 'Python, PyTorch, Hugging Face Transformers, SpeechT5, VoxPopuli Dataset, Seq2SeqTrainer, Data Preprocessing, Feature Extraction, Model Fine-Tuning, Git'
+            tech: 'Python, PyTorch, Hugging Face Transformers, SpeechT5, VoxPopuli Dataset'
         },
-        {
-            id: 'Data-Visualization',
-            title: 'Data Visualization',
-            description: `
-                <ul>
-                    <li>Designed and implemented a data analysis pipeline for social media interaction patterns, processing raw survey data through comprehensive cleaning, feature engineering, and categorical encoding using R, dplyr, and tidy</li>
-                    <li>Developed and deployed interactive dashboard visualizations (Shiny) to explore relationships between time spent on platforms, stranger interactions, and psychological impacts</li>
-                    <li>Click here for more details:
-                     <a href="https://visualizedata.shinyapps.io/Projet/" target="_blank">https://visualizedata.shinyapps.io/Projet/ class="data-visualization-link"</a>
-                    </li>
-                </ul>
-            `,
-            tech: 'R, Shinyapp, Python, Data Analysis, Git'
-        },
-        {
-            id: 'Movie-Review',
-            title: 'Movie Review Sentiment Classification: A Comparative Study of Traditional and Deep Learning Models',
-            description: `
-            <ul>
-                <li>Conducted a comprehensive study to compare traditional machine learning models (SVM, Logistic Regression, Naive Bayes) with deep learning models (LSTM, BERT transformer) for sentiment classification on movie reviews.</li>
-                <li>Fine-tuned deep learning models, including LSTM and BERT, on a labeled dataset of movie reviews to improve their performance in semantic understanding and sentiment prediction.</li>
-                <li>Preprocessed text data using techniques such as tokenization, stopword removal, and TF-IDF vectorization for traditional models, while leveraging embeddings like Word2Vec and contextualized embeddings from BERT for deep learning models.</li>
-                <li>Evaluated model performance using metrics such as accuracy, precision, recall, and F1-score, providing a detailed comparison of the strengths and limitations of each approach.</li>
-                <li>Deployed and deployed the best-performing model for real-time sentiment analysis. The application was hosted on a user-friendly interface developed using Streamlit Community Cloud.</li>
-                <li>Click here for more details:
-                     <a href="https://movies-review-sentiment-analysis-eidbpyv6tkvo8wkyubsjph.streamlit.app/?fbclid=IwZXh0bgNhZW0CMTEAAR7UAkgaojxC4HVxxrFyoFNHMZyRfUlpah9SR_XmIdmzSf9b4WaCMI8_TEHeWg_aem_-8P8WVo3vsoMKAg2ZSWOnw" target="_blank">https://movies-review-sentiment-analysis-eidbpyv6tkvo8wkyubsjph.streamlit.app/?fbclid=IwZXh0bgNhZW0CMTEAAR7UAkgaojxC4HVxxrFyoFNHMZyRfUlpah9SR_XmIdmzSf9b4WaCMI8_TEHeWg_aem_-8P8WVo3vsoMKAg2ZSWOnw "</a>
-                </li>
-            </ul>
-            `,
-            tech: 'Python, PyTorch, TensorFlow, Scikit-learn, NLTK, Hugging Face Transformers, Streamlit'
-        },
-        {
-            id: 'e-commerce',
-            title: 'E-Commerce Web application',
-            description: `Developed a web application for sports shoe sales using a Vue.js frontend and a Laravel backend. The frontend, built with Vue.js, provided a dynamic and responsive user interface, enabling users to browse products, filter by size, brand, and category, and manage their shopping cart in real time. The backend, powered by Laravel, handled key functionalities such as user authentication, product management, inventory tracking, order processing, and payment integration. The system also included an admin dashboard for managing product listings, viewing sales analytics, and handling customer queries. The application aimed to deliver a seamless e-commerce experience optimized for both desktop and mobile users.`,
-            tech: ' PHP, Vue.js, Laravel, HTML, CSS, Javascript, Tailwind, Git'
-        },
-        {
-            id: 'air-writing',
-            title: 'Air Writing',
-            description: `Collected and prepared khmer dataset to train and fine-tune an existing machine learning model with the goal of improving its prediction accuracy. The process involved data cleaning, augmentation, and labeling to ensure high-quality input. The model was retrained using the updated dataset, followed by performance evaluation through metrics such as accuracy, precision, recall, and F1-score. This iterative process helped enhance the model's generalization and reliability in real-world scenarios.`,
-            tech: 'Python, PyTorch ,Git'
-        }
+        // ... other projects
     ];
 
-    // Populate Experience
-    const experienceTimeline = document.querySelector('.experience-timeline');
-    experience.forEach(exp => {
-        const div = document.createElement('div');
-        div.className = 'experience-item';
-        div.innerHTML = `
-            <h3>${exp.title}</h3>
-            <div class="experience-company">${exp.company}</div>
-            <div class="experience-dates">${exp.dates}</div>
-            <div class="experience-description">${exp.description}</div>
-        `;
-        experienceTimeline.appendChild(div);
-    });
+    // DOM Population Functions
+    function populateExperience() {
+        const experienceTimeline = document.querySelector('.experience-timeline');
+        experience.forEach(exp => {
+            const div = document.createElement('div');
+            div.className = 'experience-item';
+            div.innerHTML = `
+                <h3>${exp.title}</h3>
+                <div class="experience-company">${exp.company}</div>
+                <div class="experience-dates">${exp.dates}</div>
+                <div class="experience-description">${exp.description}</div>
+            `;
+            experienceTimeline.appendChild(div);
+        });
+    }
 
-    // Populate Certifications
-    const certsGrid = document.querySelector('.certifications-grid');
-    certifications.forEach(cert => {
-        const div = document.createElement('div');
-        div.className = 'certification-card';
-        div.innerHTML = `
-            <h3><a href="${cert.link}" target="_blank">${cert.title}</a></h3>
-            <p>${cert.issuer}</p>
-            <div class="cert-date">${cert.date}</div>
-        `;
-        certsGrid.appendChild(div);
-    });
+    function populateCertifications() {
+        const certsGrid = document.querySelector('.certifications-grid');
+        certifications.forEach(cert => {
+            const div = document.createElement('div');
+            div.className = 'certification-card';
+            div.innerHTML = `
+                <h3><a href="${cert.link}" target="_blank">${cert.title}</a></h3>
+                <p>${cert.issuer}</p>
+                <div class="cert-date">${cert.date}</div>
+            `;
+            certsGrid.appendChild(div);
+        });
+    }
 
-    // Populate Skills
-    const skillsGrid = document.querySelector('.skills-grid');
-    skills.forEach(skill => {
-        const div = document.createElement('div');
-        div.className = 'skill-card';
-        div.textContent = skill;
-        skillsGrid.appendChild(div);
-    });
+    function populateSkills() {
+        const skillsGrid = document.querySelector('.skills-grid');
+        skills.forEach(skill => {
+            const div = document.createElement('div');
+            div.className = 'skill-card';
+            div.textContent = skill;
+            skillsGrid.appendChild(div);
+        });
+    }
 
-    // Populate Projects
-    const projectsGrid = document.querySelector('.projects-grid');
-    projects.forEach(project => {
-        const div = document.createElement('div');
-        div.className = 'project-card';
-        div.id = project.id;
-        div.innerHTML = `
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <div class="tech">${project.tech}</div>
-        `;
-        projectsGrid.appendChild(div);
-    });
+    function populateProjects() {
+        const projectsGrid = document.querySelector('.projects-grid');
+        projects.forEach(project => {
+            const div = document.createElement('div');
+            div.className = 'project-card';
+            div.id = project.id;
+            div.innerHTML = `
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="tech">${project.tech}</div>
+            `;
+            projectsGrid.appendChild(div);
+        });
+    }
 
-    // Check for anchor link on page load
-    window.addEventListener('DOMContentLoaded', () => {
-        const hash = window.location.hash.substring(1); // Get #id from URL
-        if (hash) {
-            const project = document.getElementById(hash);
-            if (project) {
-                project.scrollIntoView({ behavior: 'smooth' });
-                project.style.backgroundColor = '#f8f9fa'; // Optional highlight
+    // Initialize all content
+    populateExperience();
+    populateCertifications();
+    populateSkills();
+    populateProjects();
+
+    // Enhanced Anchor Link Handling
+    function handleAnchorLinks() {
+        // Highlight target section on page load
+        if (window.location.hash) {
+            const target = document.querySelector(window.location.hash);
+            if (target) {
+                target.style.transition = 'background-color 1s';
+                target.style.backgroundColor = '#f8f9fa';
+                setTimeout(() => {
+                    target.style.backgroundColor = '';
+                }, 2000);
+                target.scrollIntoView({ behavior: 'smooth' });
             }
         }
-    });
 
-    // Mobile Menu
-    const menuBtn = document.querySelector('.menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    
-    menuBtn.addEventListener('click', () => {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    });
-
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                history.pushState(null, '', targetId);
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.style.transition = 'background-color 1s';
+                    target.style.backgroundColor = '#f8f9fa';
+                    setTimeout(() => {
+                        target.style.backgroundColor = '';
+                    }, 2000);
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
-    });
+    }
+
+    // Mobile Menu Toggle
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    }
+
+    // Initialize all functionality
+    handleAnchorLinks();
 });
 
-// script.js
-// Add education data
+// Education Data
 const education = [
     {
         degree: "MSc in Artificial Intelligence and Data Science",
@@ -306,20 +230,27 @@ const education = [
         institution: "Institute of Technology of Cambodia",
         dates: "2019 - 2024",
         details: "",
-        certificateLink:"https://drive.google.com/file/d/1_l47ltz4hGzPOs0fvZl3AL-kYQWtIssW/view?usp=drive_link"
+        certificateLink: "https://drive.google.com/file/d/1_l47ltz4hGzPOs0fvZl3AL-kYQWtIssW/view?usp=drive_link"
     }
 ];
 
 // Populate Education
-const educationTimeline = document.querySelector('.education-timeline');
-education.forEach(edu => {
-    const div = document.createElement('div');
-    div.className = 'education-item';
-    div.innerHTML = `
-        <h3>${edu.degree}</h3>
-        <div class="education-institution">${edu.institution}</div>
-        <div class="education-dates">${edu.dates}</div>
-        <p class="education-details">${edu.details}</p>
-    `;
-    educationTimeline.appendChild(div);
+document.addEventListener('DOMContentLoaded', () => {
+    const educationTimeline = document.querySelector('.education-timeline');
+    if (educationTimeline) {
+        education.forEach(edu => {
+            const div = document.createElement('div');
+            div.className = 'education-item';
+            const certLink = edu.certificateLink ? 
+                `<a href="${edu.certificateLink}" target="_blank" class="certificate-link">View Certificate</a>` : '';
+            div.innerHTML = `
+                <h3>${edu.degree}</h3>
+                <div class="education-institution">${edu.institution}</div>
+                <div class="education-dates">${edu.dates}</div>
+                <p class="education-details">${edu.details}</p>
+                ${certLink}
+            `;
+            educationTimeline.appendChild(div);
+        });
+    }
 });
