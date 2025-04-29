@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <ul class="experience-list">
                     <li>Designed and deployed a zero-shot email classification system using LLaMA 3.1 8B and UnSloth, without the need for labeled training data.</li>
                     <li>Refined prompt engineering techniques to ensure the AI system responded and classified accurately and naturally according to the task.</li>
-                    <li>Created a Retrieval-Augmented Generation (RAG) pipeline that dynamically pulls in relevant legal codes and administrative policies.</li>
+                    <li>Implemented a RAG pipeline using nomic-embed-text for semantic embedding, FAISS for efficient vector-based retrieval, and a locally hosted LLM (Gemma 3 12B via Ollama) for generation. The system was orchestrated with LangChain and applied to extract legal codes from indexed documents and automatically generate official response letters, enabling more precise and informative outputs tailored to real-world legal and administrative use cases.</li>
                 </ul>
             `,
         },

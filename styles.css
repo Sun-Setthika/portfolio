@@ -462,7 +462,8 @@ nav {
     max-width: 100%; /* Ensure the link respects the container's width */
 }
 
-.project-card a:hover {
+.project-card a:hover
+.education-item a:hover {
     text-decoration: underline; /* Add underline on hover for better UX */
 }
 
