@@ -145,6 +145,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li>Conducted a comparative study of fine-tuning vs RAG approaches.</li>
                     <li>Fine-tuned Llama 3.1 8B model using UnSloth and LoRA.</li>
                     <li>Developed hybrid retrieval system with BM25 and semantic encoder.</li>
+                    <li> The dataset included comprehensive information such as:
+                        <ul>
+                            <li>Housing and rental options for students.</li>
+                            <li>Study and work conditions for international learners.</li>
+                            <li>Detailed descriptions of courses, curricula, and academic requirements in the Department of Informatics and Artificial Intelligence.</li>                    
+                        </ul>
+                    </li>
                 </ul>
             `,
             tech: 'Python, LLM, PyTorch, Deep Learning'
