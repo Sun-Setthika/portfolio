@@ -314,8 +314,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="experience-description">${exp.description}</div>
                 ${exp.demo ? `
                     <div class="experience-demo">
-                        <video controls playsinline preload="metadata" aria-label="${exp.title} demo video">
-                            <source src="${exp.demo}" type="video/mp4">
+                        <video
+                            class="experience-demo-video"
+                            src="${exp.demo}"
+                            controls
+                            playsinline
+                            preload="auto"
+                            aria-label="${exp.title} demo video"
+                        >
                             Your browser does not support embedded video playback.
                         </video>
                     </div>
