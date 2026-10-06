@@ -318,6 +318,23 @@ nav {
     left: 0;
 }
 
+.experience-demo-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: var(--primary-color);
+    font-family: 'Be Vietnam', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.experience-demo-link:hover,
+.experience-demo-link:focus-visible {
+    color: var(--highlight-color);
+    border-bottom-color: var(--highlight-color);
+}
+
 /* Education Timeline */
 .education-timeline {
     max-width: 900px;

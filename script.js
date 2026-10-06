@@ -58,6 +58,42 @@ document.addEventListener('DOMContentLoaded', () => {
     // Experience Data (Your original content)
     const experience = [
         {
+            title: "AI Engineer",
+            company: "STMicroelectronics",
+            dates: "September 2025 - September 2026",
+            description: `
+                <ul class="experience-list">
+                    <li>Developed a Failure Analysis Search Agent to help Customer Support and Failure Analysis engineers retrieve similar historical investigation cases from technical reports.</li>
+                    <li>Designed an Agentic RAG architecture with dual knowledge bases, combining a Structured KB for metadata retrieval with an Unstructured KB for detailed technical report content, enabling dynamic retrieval across both sources.</li>
+                    <li>Developed multimodal document enrichment to make technical figures and images searchable alongside textual information.</li>
+                    <li>Evaluated end-to-end agent performance using LLM-as-a-Judge with a score from 0 to 100.</li>
+                </ul>
+            `,
+        },
+        {
+            title: "IMT Mines Alès Chatbot - Agentic RAG with Citations",
+            company: "IMT Mines Alès",
+            description: `
+                <ul class="experience-list">
+                    <li>Developed a bilingual FR/EN academic assistant based on <strong>MCP and Agentic RAG</strong>, combining hybrid retrieval (<strong>BGE-M3 + BM25</strong>), reranking, and generation with <strong>Gemini/OpenRouter</strong> to produce contextualized, source-grounded responses.</li>
+                    <li>Evaluated the system using <strong>Recall@K, MRR</strong>, and <strong>LLM-as-a-Judge</strong> on a validated query set, while implementing guardrails to reduce unsupported or ungrounded responses.</li>
+                </ul>
+            `,
+            demo: "https://github.com/user-attachments/assets/3e8b540f-9950-4d56-ad9b-37a80de4eace",
+        },
+        {
+            title: "Mission and Research Development",
+            company: "IMT Mines Alès",
+            dates: "June 2025 - August 2025",
+            description: `
+                <ul class="experience-list">
+                    <li>Constructed and pre-processed large-scale image datasets for pattern recognition tasks, employing data curation, augmentation, and annotation best practices. </li>
+                    <li>Trained and fine-tuned deep learning models based on the ResNet architecture, optimizing hyperparameters to achieve high classification accuracy and robust generalization performance.</li>
+                    <li>Integrated Explainable AI (XAI) methods—such as saliency mapping, feature visualization, or SHAP/LIME—to interpret model predictions, provide insights into decision-making processes, and support transparent AI system development.</li>
+                </ul>
+            `,
+        },
+        {
             title: "Mission and Research Development",
             company: "Préfecture du Gard",
             dates: "Jan 2025 - Present",
@@ -79,8 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li>Constructed diverse synthetic datasets from raw text using various Khmer font families.</li>
                     <li>Fine-tuned a deep learning pipeline combining CNNs with GRUs to handle spatial and sequential features.</li>
                     <li>Built a user-friendly interface with Gradio for text extraction from images.</li>
+                    <li>Deployed the application on <strong>Google Cloud Run</strong> with an automated <strong>CI/CD pipeline using GitHub Actions</strong>.</li>
                 </ul>
             `,
+            demo: "https://github.com/user-attachments/assets/d8bdb890-3705-4a34-88e2-9d2b9ea53332",
         },
         // ... other experience items
         {
@@ -271,9 +309,10 @@ document.addEventListener('DOMContentLoaded', () => {
             div.className = 'experience-item';
             div.innerHTML = `
                 <h3>${exp.title}</h3>
-                <div class="experience-company">${exp.company}</div>
-                <div class="experience-dates">${exp.dates}</div>
+                ${exp.company ? `<div class="experience-company">${exp.company}</div>` : ''}
+                ${exp.dates ? `<div class="experience-dates">${exp.dates}</div>` : ''}
                 <div class="experience-description">${exp.description}</div>
+                ${exp.demo ? `<a href="${exp.demo}" target="_blank" rel="noopener noreferrer" class="experience-demo-link">View Demo</a>` : ''}
             `;
             experienceTimeline.appendChild(div);
         });
