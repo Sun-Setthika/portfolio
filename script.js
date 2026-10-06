@@ -312,7 +312,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 ${exp.company ? `<div class="experience-company">${exp.company}</div>` : ''}
                 ${exp.dates ? `<div class="experience-dates">${exp.dates}</div>` : ''}
                 <div class="experience-description">${exp.description}</div>
-                ${exp.demo ? `<a href="${exp.demo}" target="_blank" rel="noopener noreferrer" class="experience-demo-link">View Demo</a>` : ''}
+                ${exp.demo ? `
+                    <div class="experience-demo">
+                        <video controls playsinline preload="metadata" aria-label="${exp.title} demo video">
+                            <source src="${exp.demo}" type="video/mp4">
+                            Your browser does not support embedded video playback.
+                        </video>
+                    </div>
+                ` : ''}
             `;
             experienceTimeline.appendChild(div);
         });
