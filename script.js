@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
         },
         {
+            id: "khmer-ocr-demo",
             title: "AI Engineer",
             company: "Ministry of Posts and Telecommunication, Cambodia",
             dates: "Feb 2024 - May 2024",
@@ -335,6 +336,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function scrollToExperienceFromHash() {
+        if (!window.location.hash) return;
+
+        const targetId = decodeURIComponent(window.location.hash.slice(1));
+        const target = document.getElementById(targetId);
+
+        if (target) {
+            requestAnimationFrame(() => {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+    }
+
     function populateCertifications() {
         const certsGrid = document.querySelector('.certifications-grid');
         certifications.forEach(cert => {
@@ -394,6 +408,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize all content
     populateExperience();
+    scrollToExperienceFromHash();
+    window.addEventListener('hashchange', scrollToExperienceFromHash);
     populateCertifications();
     populateSkills();
     populateProjects();
