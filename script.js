@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
         },
         {
+            id: "imt-mines-ales-chatbot-demo",
             title: "IMT Mines Alès Chatbot - Agentic RAG with Citations",
             company: "IMT Mines Alès",
             description: `
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li>Evaluated the system using <strong>Recall@K, MRR</strong>, and <strong>LLM-as-a-Judge</strong> on a validated query set, while implementing guardrails to reduce unsupported or ungrounded responses.</li>
                 </ul>
             `,
-            demo: "https://github.com/user-attachments/assets/3e8b540f-9950-4d56-ad9b-37a80de4eace",
+            demo: "https://github.com/user-attachments/assets/edb68ace-5cac-4bb3-909d-487f17dfb030",
         },
         {
             title: "Mission and Research Development",
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li>Deployed the application on <strong>Google Cloud Run</strong> with an automated <strong>CI/CD pipeline using GitHub Actions</strong>.</li>
                 </ul>
             `,
-            demo: "https://github.com/user-attachments/assets/d8bdb890-3705-4a34-88e2-9d2b9ea53332",
+            demo: "https://github.com/user-attachments/assets/fe2a3fb2-33bb-431c-98f5-9d68fc010535",
         },
         // ... other experience items
         {
@@ -307,6 +308,9 @@ document.addEventListener('DOMContentLoaded', () => {
         experience.forEach(exp => {
             const div = document.createElement('div');
             div.className = 'experience-item';
+            if (exp.id) {
+                div.id = exp.id;
+            }
             div.innerHTML = `
                 <h3>${exp.title}</h3>
                 ${exp.company ? `<div class="experience-company">${exp.company}</div>` : ''}
@@ -316,13 +320,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="experience-demo">
                         <video
                             class="experience-demo-video"
-                            src="${exp.demo}"
                             controls
                             playsinline
                             preload="auto"
                             aria-label="${exp.title} demo video"
                         >
-                            Your browser does not support embedded video playback.
+                            Demo
+                            <source src="${exp.demo}">
                         </video>
                     </div>
                 ` : ''}

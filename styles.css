@@ -269,6 +269,12 @@ nav {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
     color: var(--text-color);
+    scroll-margin-top: 7rem;
+}
+
+.experience-item:target {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color), 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .experience-item h3 {
