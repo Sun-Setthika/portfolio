@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function scrollToExperienceFromHash() {
+    function scrollToExperienceFromHash(behavior = 'smooth') {
         if (!window.location.hash) return;
 
         const targetId = decodeURIComponent(window.location.hash.slice(1));
@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (target) {
             requestAnimationFrame(() => {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                target.scrollIntoView({ behavior, block: 'start' });
             });
         }
     }
@@ -422,8 +422,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize all content
     populateExperience();
-    scrollToExperienceFromHash();
-    window.addEventListener('hashchange', scrollToExperienceFromHash);
+    scrollToExperienceFromHash('auto');
+    window.addEventListener('load', () => scrollToExperienceFromHash('auto'));
+    window.addEventListener('hashchange', () => scrollToExperienceFromHash('smooth'));
     populateCertifications();
     populateSkills();
     populateProjects();
@@ -431,20 +432,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Enhanced Anchor Link Handling (From working reference code)
     function handleAnchorLinks() {
-        // Highlight target section on page load
-        if (window.location.hash) {
-            const target = document.querySelector(window.location.hash);
-            if (target) {
-                setTimeout(() => {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    target.style.backgroundColor = '#f8f9fa';
-                    setTimeout(() => {
-                        target.style.backgroundColor = '';
-                    }, 2000);
-                }, 100);
-            }
-        }
-
         // Smooth scroll for all anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {

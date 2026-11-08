@@ -336,6 +336,7 @@ nav {
 .experience-demo iframe {
     display: block;
     width: 100%;
+    aspect-ratio: 16 / 9;
     max-height: 600px;
     background-color: #000;
     border: 0;
@@ -343,10 +344,7 @@ nav {
 
 .experience-demo video {
     height: auto;
-}
-
-.experience-demo iframe {
-    aspect-ratio: 16 / 9;
+    object-fit: contain;
 }
 
 /* Education Timeline */
