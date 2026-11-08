@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li>Integrated automated PDF/Excel report generation for administrators, reducing manual paperwork and enhancing data visibility across programs.</li>
                 </ul>
             `,
-            demo: "https://github.com/user-attachments/assets/9b58ddc2-b64e-4097-951c-2473f1d9e1ba",
+            demo: "https://drive.google.com/file/d/1Nq4woKZ3cJHh8k_V1fb0qUrNnRkMwcUL/view?usp=sharing",
         },
         {
             title: "Software Engineer",
