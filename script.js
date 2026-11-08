@@ -135,7 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li>Integrated automated PDF/Excel report generation for administrators, reducing manual paperwork and enhancing data visibility across programs.</li>
                 </ul>
             `,
-            demo: "https://drive.google.com/file/d/1Nq4woKZ3cJHh8k_V1fb0qUrNnRkMwcUL/view?usp=sharing",
+            demo: "https://drive.google.com/file/d/1Nq4woKZ3cJHh8k_V1fb0qUrNnRkMwcUL/preview",
+            demoType: "iframe",
         },
         {
             title: "Software Engineer",
@@ -321,16 +322,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="experience-description">${exp.description}</div>
                 ${exp.demo ? `
                     <div class="experience-demo">
-                        <video
-                            class="experience-demo-video"
-                            controls
-                            playsinline
-                            preload="auto"
-                            aria-label="${exp.title} demo video"
-                        >
-                            Demo
-                            <source src="${exp.demo}">
-                        </video>
+                        ${exp.demoType === 'iframe' ? `
+                            <iframe
+                                class="experience-demo-video"
+                                src="${exp.demo}"
+                                title="${exp.title} demo video"
+                                loading="lazy"
+                                allow="autoplay; fullscreen"
+                                allowfullscreen
+                            ></iframe>
+                        ` : `
+                            <video
+                                class="experience-demo-video"
+                                controls
+                                playsinline
+                                preload="auto"
+                                aria-label="${exp.title} demo video"
+                            >
+                                Demo
+                                <source src="${exp.demo}">
+                            </video>
+                        `}
                     </div>
                 ` : ''}
             `;

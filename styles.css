@@ -332,12 +332,21 @@ nav {
     background-color: #000;
 }
 
-.experience-demo video {
+.experience-demo video,
+.experience-demo iframe {
     display: block;
     width: 100%;
-    height: auto;
     max-height: 600px;
     background-color: #000;
+    border: 0;
+}
+
+.experience-demo video {
+    height: auto;
+}
+
+.experience-demo iframe {
+    aspect-ratio: 16 / 9;
 }
 
 /* Education Timeline */
